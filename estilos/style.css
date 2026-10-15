@@ -41,6 +41,32 @@ img#diasem{
     margin-bottom: 7px;
 }
 
+div#containerapps{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+    justify-items: center;
+    justify-content: center;
+}
+
+#imgicon1{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+img.imgicon{
+    /* Configuração geral para ícones de imagens */
+    height: 45px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    overflow: hidden;
+    outline: 1px solid black;
+    border-radius: 5px;
+}
+
 p#copy{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
