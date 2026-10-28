@@ -7,9 +7,11 @@ function carregar(){
 
     const agora = new Date()
     const ahora = agora.getHours()
+    const minutos = agora.getMinutes()
+    const segundos = agora.getSeconds()
     const diaSem = agora.getDay()
 
-        phora.innerHTML = `Agora são ${ahora} horas`
+        phora.innerHTML = `${ahora}:${minutos}:${segundos}`
 
         if (ahora >= 0 && ahora <= 5){
             comprimento.innerHTML = `Bom dia!`
@@ -63,3 +65,5 @@ function carregar(){
                 break
         }
 }
+
+setInterval(carregar, 1000)
