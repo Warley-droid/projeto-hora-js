@@ -11,24 +11,38 @@ function carregar(){
     const segundos = agora.getSeconds()
     const diaSem = agora.getDay()
 
-        phora.innerHTML = `${ahora}:${minutos}:${segundos}`
+    function zero(numero){
+        return numero < 10 ? `0${numero}` : numero
+    }
+
+        phora.innerHTML = `${zero(ahora)}:${zero(minutos)}:${zero(segundos)}`
 
         if (ahora >= 0 && ahora <= 5){
             comprimento.innerHTML = `Bom dia!`
             iHdia.src = 'imagens/noite.300.jpg'
-        }else if (ahora > 5 && ahora < 12){
+            window.document.body.style.backgroundColor = 'rgb(30, 41, 59)'
+        }
+        else if (ahora > 5 && ahora < 12){
             comprimento.innerHTML = `Bom dia!`
             iHdia.src = `imagens/manha.300.jpg`
-        }else if (ahora >= 12 && ahora < 18){
+            window.document.body.style.backgroundColor = 'rgb(204, 251, 241)'
+            phora.style.color = 'rgb(24, 87, 104)'
+        }
+        else if (ahora >= 12 && ahora < 18){
             comprimento.innerHTML = `Boa tarde!`
             iHdia.src = `imagens/meio-dia.300.jpg`
-        }else if (ahora > 12 && ahora < 24){
+            window.document.body.style.backgroundColor = 'rgb(186, 230, 253)'
+            phora.style.color = 'rgb(24, 87, 104)'
+        }
+        else if (ahora > 12 && ahora < 24){
             comprimento.innerHTML = `Boa noite!`
             iHdia.src = `imagens/noite.300.jpg`
-        }else{
+            window.document.body.style.backgroundColor = 'rgb(30, 41, 59)'
+        }
+        else{
             comprimento.innerHTML = `[ERRO]`
             phora.innerHTML = `[ERRO]`
-            window.alert('Erro no sistema!')
+            window.alert('Erro no sistema! Tente recarregar a página.')
         }
 
         switch(diaSem){
