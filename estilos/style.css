@@ -14,7 +14,7 @@ header{
     color: rgb(0, 200, 255);
     font-family: cursive;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 7px;
     font-size: 25px;
     font-weight: bold;
 }
@@ -37,34 +37,47 @@ img#diasem{
     border-radius: 10px;
     display: block;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 7px;
     margin-bottom: 7px;
 }
 
-div#containerapps{
+#containerapps {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 5px;
     justify-items: center;
     justify-content: center;
 }
 
-#imgicon1{
-    grid-column-start: 5;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 2;
+.icon-item {
+    /* Configuração geral para a div completa dos itens (nome+imagens) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-img.imgicon{
-    /* Configuração geral para ícones de imagens */
+.imgicon {
+    /* Configuração geral para as imagens dos itens */
     height: 45px;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     overflow: hidden;
     outline: 1px solid black;
     border-radius: 5px;
+}
+
+.nome-app {
+    /* Configuração geral para os nomes dos itens */
+    margin-top: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+#icon-item1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 p#copy{
