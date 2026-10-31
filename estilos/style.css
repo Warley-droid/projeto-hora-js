@@ -85,6 +85,11 @@ img#diasem{
     grid-row: 1 / 2;
 }
 
+#icon-item3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
 p#copy{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
